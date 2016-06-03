@@ -22,7 +22,7 @@ public class MetricaDao {
 	public List<Metrica> getMetricas() {
 		return this.jdbcTemplate
 			.query(
-				"select * from metrica order by id", 
+				"select * from metrica order by codigo", 
 				new MetricaRowMapper());
 	}
 

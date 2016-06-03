@@ -24,12 +24,18 @@ public class AlertaDao {
 				"select * from alerta order by id", 
 				new AlertaRowMapper());
 	}
+	
+	public List<Metrica> getMetricas() {
+		return this.jdbcTemplate
+			.query(
+				"select * from metrica order by codigo", 
+				new MetricaRowMapper());
+	}
+
 
 	public int createAlerta(Alerta alerta) {
 		return jdbcTemplate.update(
-			"insert into alerta (nome,regras,tipo) values (?,?)", 
-			alerta.getNome(),
-			alerta.getRegras(),
-			alerta.getTipo());
+			"insert into alerta (nome) values (?,?)", 
+			alerta.getNome());
 	}
 }

@@ -12,12 +12,12 @@ public class AlertaRowMapper {
 	
       
 
-	/*	@Override
+		@Override
 	public Alerta mapRow(ResultSet rs, int rowNum) throws SQLException {
 		return new Alerta(
 				rs.getLong("id"), 
 				rs.getString("nome"),
 				rs.getObject("tipo", Tipo),
 				rs.getObject("regras",List<Regra> regras));
-	}*/
+	}
 }
