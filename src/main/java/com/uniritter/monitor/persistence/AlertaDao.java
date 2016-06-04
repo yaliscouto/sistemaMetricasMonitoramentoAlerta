@@ -25,12 +25,6 @@ public class AlertaDao {
 				new AlertaRowMapper());
 	}
 	
-	public List<Metrica> getMetricas() {
-		return this.jdbcTemplate
-			.query(
-				"select * from metrica order by codigo", 
-				new MetricaRowMapper());
-	}
 
 
 	public int createAlerta(Alerta alerta) {
