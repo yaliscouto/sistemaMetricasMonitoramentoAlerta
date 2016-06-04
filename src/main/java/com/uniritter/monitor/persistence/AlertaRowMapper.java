@@ -18,11 +18,11 @@ public class AlertaRowMapper implements RowMapper<Alerta>  {
 	
 	public Alerta mapRow(ResultSet rs, int rowNum) throws SQLException {
 		Tipo tipo;
-		Regra regra ;
+		List<Regra> regra ;
 		return new Alerta(
 				rs.getLong("id"), 
 				rs.getString("nome"),
-				(List<Regra>) (regra = (Regra)rs.getObject("regras")),
+				regra = (List<Regra>)rs.getObject("regras"),
 				tipo = (Tipo) rs.getObject("tipo"));
 	}
 }
