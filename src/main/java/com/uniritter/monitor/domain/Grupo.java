@@ -9,7 +9,6 @@ public class Grupo {
 	private List<Host> host;
 
 	public Grupo(int id, int descricao, List<Host> host) {
-		super();
 		this.id = id;
 		this.descricao = descricao;
 		this.host = host;
