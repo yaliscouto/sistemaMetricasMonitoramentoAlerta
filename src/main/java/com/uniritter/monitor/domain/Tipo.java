@@ -1,19 +1,19 @@
 package com.uniritter.monitor.domain;
 
 public class Tipo {
-	private int id;
+	private Long id;
 	private String nome;
 
-	public Tipo(int id, String nome) {
+	public Tipo(Long id, String nome) {
 		this.id = id;
 		this.nome = nome;
 	}
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
