@@ -7,13 +7,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.uniritter.monitor.persistence.AlertaDao;
+import com.uniritter.monitor.persistence.AlertaDAO;
 
 @Component
 public class AlertaRepository {
 	
 	@Autowired
-	AlertaDao alertaDao;
+	AlertaDAO alertaDao;
 	
 	public List<Alerta> getAlertas() {
 		return this.alertaDao.getAlertas();

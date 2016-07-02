@@ -9,11 +9,11 @@ import org.springframework.stereotype.Component;
 import com.uniritter.monitor.domain.Alerta;
 
 @Component
-public class AlertaDao {
+public class AlertaDAO {
 	private JdbcTemplate jdbcTemplate;
 
 	@Autowired
-	public AlertaDao(JdbcTemplate jdbcTemplate) {
+	public AlertaDAO(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
 	}
 
@@ -22,6 +22,6 @@ public class AlertaDao {
 	}
 
 	public int createAlerta(Alerta alerta) {
-		return jdbcTemplate.update("insert into alerta (nome) values (?,?)", alerta.getNome());
+		return jdbcTemplate.update("insert into alerta (nome,) values (?,?)", alerta.getNome());
 	}
 }

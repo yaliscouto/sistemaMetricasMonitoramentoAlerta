@@ -9,12 +9,12 @@ import org.springframework.stereotype.Component;
 import com.uniritter.monitor.domain.Metrica;
 
 @Component
-public class MetricaDao {
+public class MetricaDAO {
 
 	private JdbcTemplate jdbcTemplate;
 	
 	@Autowired
-	public MetricaDao(JdbcTemplate jdbcTemplate) {
+	public MetricaDAO(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
 	}
 	
