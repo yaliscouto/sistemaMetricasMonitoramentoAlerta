@@ -1,28 +1,7 @@
 package com.uniritter.monitor.domain;
 
-public class Tipo {
-	private Long id;
-	private String nome;
-
-	public Tipo(Long id, String nome) {
-		this.id = id;
-		this.nome = nome;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+public enum Tipo {
+	
+	ESPACO_EM_DISCO, CPU, MEMORIA, TEMPO_DE_RESPOSTA;
 
 }

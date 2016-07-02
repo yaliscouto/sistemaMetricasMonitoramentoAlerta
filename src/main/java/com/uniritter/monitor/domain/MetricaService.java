@@ -7,21 +7,18 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class MetricaService {
-	
+
 	@Autowired
 	MetricaRepository repository;
-	
+
 	public List<Metrica> getMetricas() {
-		
 		return repository.getMetricas();
-		
 	}
 
 	public Metrica createMetrica(String nomeMetrica) {
-		
+
 		return repository.createMetrica(nomeMetrica);
-		
+
 	}
-	
-	
+
 }

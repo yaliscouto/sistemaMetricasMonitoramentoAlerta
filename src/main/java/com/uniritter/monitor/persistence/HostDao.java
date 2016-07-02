@@ -24,6 +24,6 @@ public class HostDao {
 
 	public int createHost(Host host) {
 		return jdbcTemplate.update("insert into host (nome,id_grupo) values (?,?)", host.getNome(),
-				host.getGrupo().getId());
+				host.getGrupo().toString());
 	}
 }

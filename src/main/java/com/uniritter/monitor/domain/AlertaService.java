@@ -11,9 +11,7 @@ public class AlertaService {
 	AlertaRepository repository;
 
 	public List<Alerta> getAlertas() {
-
 		return repository.getAlertas();
-
 	}
 
 	public Alerta createAlerta(String nomeAlerta, List<Regra> regras, Tipo tipo) {

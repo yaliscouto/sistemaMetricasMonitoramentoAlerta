@@ -17,12 +17,12 @@ public class AlertaRowMapper implements RowMapper<Alerta>  {
 	@Override
 	
 	public Alerta mapRow(ResultSet rs, int rowNum) throws SQLException {
-		Tipo tipo;
+		
 		List<Regra> regra ;
 		return new Alerta(
 				rs.getLong("id"), 
 				rs.getString("nome"),
 				regra = (List<Regra>)rs.getObject("regras"),
-				tipo = (Tipo) rs.getObject("tipo"));
+				rs.getString("tipo"));
 	}
 }

@@ -25,7 +25,7 @@ public class RegraDao {
 		return jdbcTemplate.update("insert into alerta (nome,valor,id_tipo) values (?,?,?)",
 				regra.getNome(),
 				regra.getValor(), 
-				regra.getTipo().getId());
+				regra.getTipo());
 	}
 
 }

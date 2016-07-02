@@ -18,7 +18,7 @@ public class HostRowMapper  implements RowMapper<Host>{
 		return new Host(
 				rs.getLong("id"), 
 				rs.getString("nome"),
-				grupo = (Grupo)rs.getObject("Grupo"));
+				rs.getString("grupo"));
 	}
 
 }	

@@ -24,7 +24,7 @@ public class HostRepository {
 		
 		Host nova = new Host(
 				null,
-				nomeHost, grupo);
+				nomeHost, grupo.toString());
 		hostDao.createHost(nova);
 		return nova;
 	}

@@ -3,12 +3,13 @@ package com.uniritter.monitor.domain;
 import java.util.List;
 
 public class Alerta {
-	private Long id;
-	private String nome; 
-	private List<Regra> regras;
-	private Tipo tipo;
 	
-	public Alerta(Long id, String nome, List<Regra> regras, Tipo tipo) {
+	private Long id;
+	private String nome;
+	private List<Regra> regras;
+	private String tipo;
+
+	public Alerta(Long id, String nome, List<Regra> regras, String tipo) {
 		this.id = id;
 		this.nome = nome;
 		this.regras = regras;
@@ -39,13 +40,11 @@ public class Alerta {
 		this.regras = regras;
 	}
 
-	public Tipo getTipo() {
+	public String getTipo() {
 		return tipo;
 	}
 
-	public void setTipo(Tipo tipo) {
+	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	
-
 }

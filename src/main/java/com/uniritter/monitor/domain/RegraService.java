@@ -11,9 +11,7 @@ public class RegraService {
 	RegraRepository repository;
 
 	public List<Regra> getRegras() {
-
 		return repository.getRegras();
-
 	}
 
 	public Regra createRegra(String nomeRegra, double valor, Tipo tipo) {

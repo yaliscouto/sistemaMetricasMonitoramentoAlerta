@@ -20,10 +20,9 @@ public class AlertaRepository {
 	}
 
 	public Alerta createAlerta(String nomeAlerta,List<Regra> regras, Tipo tipo) {
-		
 		Alerta novaAlerta = new Alerta(
 				null,
-				nomeAlerta,regras,tipo);
+				nomeAlerta,regras,tipo.toString());
 		alertaDao.createAlerta(novaAlerta);
 		return novaAlerta;
 	}
