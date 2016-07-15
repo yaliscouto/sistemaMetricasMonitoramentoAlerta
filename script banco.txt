@@ -1,0 +1,12 @@
+create table host (  
+id int primary key auto_increment,
+nome varchar(50) not null,
+grupo varchar(30)
+)
+
+alter table medicao add tipo varchar(30)
+alter table medicao add FOREIGN KEY (id_host) REFERENCES host (Id)
+
+alter table alerta add tipo varchar(30)
+
+

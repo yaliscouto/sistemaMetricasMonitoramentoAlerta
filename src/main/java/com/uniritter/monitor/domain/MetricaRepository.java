@@ -6,13 +6,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.uniritter.monitor.persistence.MetricaDAO;
+import com.uniritter.monitor.persistence.MetricaDao;
 
 @Component
 public class MetricaRepository {
 	
 	@Autowired
-	MetricaDAO metricaDao;
+	MetricaDao metricaDao;
 	
 	public List<Metrica> getMetricas() {
 		return this.metricaDao.getMetricas();

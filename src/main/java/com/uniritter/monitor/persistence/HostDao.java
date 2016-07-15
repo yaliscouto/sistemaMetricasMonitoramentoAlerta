@@ -9,12 +9,12 @@ import org.springframework.stereotype.Component;
 import com.uniritter.monitor.domain.Host;
 
 @Component
-public class HostDAO {
+public class HostDao {
 
 	private JdbcTemplate jdbcTemplate;
 
 	@Autowired
-	public HostDAO(JdbcTemplate jdbcTemplate) {
+	public HostDao(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
 	}
 
