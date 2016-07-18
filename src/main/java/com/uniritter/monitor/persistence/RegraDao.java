@@ -22,10 +22,10 @@ public class RegraDao {
 	}
 
 	public int createRegra(Regra regra) {
-		return jdbcTemplate.update("insert into alerta (nome,valor,id_tipo) values (?,?,?)",
+		return jdbcTemplate.update("insert into alerta (nome,valor,tipo) values (?,?,?)",
 				regra.getNome(),
 				regra.getValor(), 
-				regra.getTipo());
+				regra.getTipo().name());
 	}
 
 }

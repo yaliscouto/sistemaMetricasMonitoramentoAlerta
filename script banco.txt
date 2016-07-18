@@ -4,9 +4,38 @@ nome varchar(50) not null,
 grupo varchar(30)
 )
 
-alter table medicao add tipo varchar(30)
-alter table medicao add FOREIGN KEY (id_host) REFERENCES host (Id)
+create table medicao(  
+id int primary key auto_increment,
+data date,
+tipo varchar(50) not null,
+id_host int ,
+ FOREIGN KEY (id_host) REFERENCES host (Id)
 
-alter table alerta add tipo varchar(30)
+)
 
+create table regra(  
+id int primary key auto_increment,
+nome varchar(50) not null,
+valor int not null,
+tipo varchar(30)
+)
 
+create table Metrica(  
+id int primary key auto_increment,
+nome varchar(50) not null,
+created date
+)
+
+create table Alerta(  
+id int primary key auto_increment,
+nome varchar(50) not null,
+tipo varchar(30) ,
+id_regra int ,
+ FOREIGN KEY (id_regra ) REFERENCES regra(Id)
+)
+  create table Notificacao(  
+id int primary key auto_increment,
+mensagem varchar(500) not null,
+id_alerta int not null,
+ FOREIGN KEY (id_alerta ) REFERENCES alerta(Id)
+)

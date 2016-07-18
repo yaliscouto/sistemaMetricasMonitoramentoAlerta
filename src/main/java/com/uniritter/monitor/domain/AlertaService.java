@@ -5,8 +5,15 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+
 @Component
 public class AlertaService {
+	@Autowired
+	MedicaoService medicaoService;
+
+	@Autowired
+	RegraService regraService;
+	
 	@Autowired
 	AlertaRepository repository;
 
@@ -18,5 +25,13 @@ public class AlertaService {
 		return repository.createAlerta(nomeAlerta, regras, tipo);
 
 	}
+	
+	public boolean DisparaAlerta(MedicaoService medicaoService, RegraService regraService) {
+					
+		
+		return true;
+
+	}
+
 
 }

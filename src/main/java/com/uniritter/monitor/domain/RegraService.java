@@ -8,7 +8,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class RegraService {
 	@Autowired
-	RegraRepository repository;
+	RegraRepository repository = new RegraRepository();
+	
 
 	public List<Regra> getRegras() {
 		return repository.getRegras();
